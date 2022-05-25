@@ -29,8 +29,11 @@ namespace ExeDataGridandNavBinding
             dadapter.Fill(dset);
             bs = new BindingSource();
             bs.DataSource = dset.Tables[0].DefaultView;
+            bs.DataSource = dset.Tables[1].DefaultView;
+            bs.DataSource = dset.Tables[2].DefaultView;
+            bs.DataSource = dset.Tables[3].DefaultView;
+            bs.DataSource = dset.Tables[4].DefaultView;
             bindingNavigator1.BindingSource = bs;
-
 
         }
 
@@ -51,6 +54,11 @@ namespace ExeDataGridandNavBinding
             // TODO: This line of code loads data into the 'prodiTIDataSet.Mahasiswa' table. You can move, or remove it, as needed.
             this.mahasiswaTableAdapter.Fill(this.prodiTIDataSet.Mahasiswa);
             this.CenterToScreen();
+
+        }
+
+        private void bindingNavigatorMoveNextItem_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -32,12 +32,16 @@ namespace ExeDataGridandNavBinding
             {
                 MessageBox.Show("Username atau password yang anda masukkan salah !!");
             }
-            else
+            else if(textBoxUser.Text == username && textBoxPass.Text == password && checkBox1.Checked)
             {
                 Menu menu = new Menu();
                 this.Hide();
                 menu.Show();
-                
+
+            }
+            else
+            {
+                MessageBox.Show("Harap setuju Term and Condition");
             }
         }
 
