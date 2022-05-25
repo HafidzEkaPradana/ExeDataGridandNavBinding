@@ -21,5 +21,19 @@ namespace ExeDataGridandNavBinding
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            DataGrid data = new DataGrid();
+            data.Show();
+            this.Hide();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Binding databinding = new Binding();
+            databinding.Show();
+            this.Hide();
+        }
     }
 }
