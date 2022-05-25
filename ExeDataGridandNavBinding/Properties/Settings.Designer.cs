@@ -33,5 +33,15 @@ namespace ExeDataGridandNavBinding.Properties {
                 return ((string)(this["ProdiTIConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-8MKEQ456;Initial Catalog=ProdiTI;Integrated Security=True")]
+        public string ProdiTIConnectionString1 {
+            get {
+                return ((string)(this["ProdiTIConnectionString1"]));
+            }
+        }
     }
 }
