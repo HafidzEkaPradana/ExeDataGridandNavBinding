@@ -10,33 +10,23 @@ using System.Windows.Forms;
 
 namespace ExeDataGridandNavBinding
 {
-    public partial class Menu : Form
+    public partial class DataView : Form
     {
-        public Menu()
+        public DataView()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             DataGrid data = new DataGrid();
             data.Show();
             this.Hide();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            Binding databinding = new Binding();
-            databinding.Show();
-            this.Hide();
-        }
-
-        private void Menu_Load(object sender, EventArgs e)
+        private void DataView_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
         }

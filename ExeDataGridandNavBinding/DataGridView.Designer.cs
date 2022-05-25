@@ -43,11 +43,12 @@ namespace ExeDataGridandNavBinding
             this.periodeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.periodeTableAdapter = new ExeDataGridandNavBinding.ProdiTIDataSetTableAdapters.PeriodeTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
-            this.nIMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namaMhsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.alamatMhsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneMhsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.nimDataGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namaMhsDataGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alamatMhsDataGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sexDataGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneMhsDataGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prodiTIDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prodiTIDataSetBindingSource)).BeginInit();
@@ -55,6 +56,7 @@ namespace ExeDataGridandNavBinding
             ((System.ComponentModel.ISupportInitialize)(this.mataKuliahBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nilaiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.periodeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -64,20 +66,21 @@ namespace ExeDataGridandNavBinding
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nIMDataGridViewTextBoxColumn,
-            this.namaMhsDataGridViewTextBoxColumn,
-            this.alamatMhsDataGridViewTextBoxColumn,
-            this.Sex,
-            this.phoneMhsDataGridViewTextBoxColumn});
+            this.nimDataGrid,
+            this.namaMhsDataGrid,
+            this.alamatMhsDataGrid,
+            this.sexDataGrid,
+            this.phoneMhsDataGrid});
             this.dataGridView1.DataSource = this.mahasiswaBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(28, 213);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(766, 355);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(817, 253);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // prodiTIDataSet
             // 
@@ -127,7 +130,7 @@ namespace ExeDataGridandNavBinding
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 400);
+            this.button1.Location = new System.Drawing.Point(28, 488);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(134, 41);
             this.button1.TabIndex = 1;
@@ -135,56 +138,68 @@ namespace ExeDataGridandNavBinding
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // nIMDataGridViewTextBoxColumn
+            // pictureBox1
             // 
-            this.nIMDataGridViewTextBoxColumn.DataPropertyName = "NIM";
-            this.nIMDataGridViewTextBoxColumn.HeaderText = "NIM";
-            this.nIMDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.nIMDataGridViewTextBoxColumn.Name = "nIMDataGridViewTextBoxColumn";
-            this.nIMDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nIMDataGridViewTextBoxColumn.Width = 150;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(28, 34);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(817, 173);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
-            // namaMhsDataGridViewTextBoxColumn
+            // nimDataGrid
             // 
-            this.namaMhsDataGridViewTextBoxColumn.DataPropertyName = "NamaMhs";
-            this.namaMhsDataGridViewTextBoxColumn.HeaderText = "NamaMhs";
-            this.namaMhsDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.namaMhsDataGridViewTextBoxColumn.Name = "namaMhsDataGridViewTextBoxColumn";
-            this.namaMhsDataGridViewTextBoxColumn.ReadOnly = true;
-            this.namaMhsDataGridViewTextBoxColumn.Width = 150;
+            this.nimDataGrid.DataPropertyName = "NIM";
+            this.nimDataGrid.HeaderText = "NIM";
+            this.nimDataGrid.MinimumWidth = 8;
+            this.nimDataGrid.Name = "nimDataGrid";
+            this.nimDataGrid.ReadOnly = true;
+            this.nimDataGrid.Width = 85;
             // 
-            // alamatMhsDataGridViewTextBoxColumn
+            // namaMhsDataGrid
             // 
-            this.alamatMhsDataGridViewTextBoxColumn.DataPropertyName = "AlamatMhs";
-            this.alamatMhsDataGridViewTextBoxColumn.HeaderText = "AlamatMhs";
-            this.alamatMhsDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.alamatMhsDataGridViewTextBoxColumn.Name = "alamatMhsDataGridViewTextBoxColumn";
-            this.alamatMhsDataGridViewTextBoxColumn.ReadOnly = true;
-            this.alamatMhsDataGridViewTextBoxColumn.Width = 150;
+            this.namaMhsDataGrid.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.namaMhsDataGrid.DataPropertyName = "NamaMhs";
+            this.namaMhsDataGrid.HeaderText = "NamaMhs";
+            this.namaMhsDataGrid.MinimumWidth = 8;
+            this.namaMhsDataGrid.Name = "namaMhsDataGrid";
+            this.namaMhsDataGrid.ReadOnly = true;
+            this.namaMhsDataGrid.Width = 117;
             // 
-            // Sex
+            // alamatMhsDataGrid
             // 
-            this.Sex.DataPropertyName = "Sex";
-            this.Sex.HeaderText = "Sex";
-            this.Sex.MinimumWidth = 8;
-            this.Sex.Name = "Sex";
-            this.Sex.ReadOnly = true;
-            this.Sex.Width = 150;
+            this.alamatMhsDataGrid.DataPropertyName = "AlamatMhs";
+            this.alamatMhsDataGrid.HeaderText = "AlamatMhs";
+            this.alamatMhsDataGrid.MinimumWidth = 8;
+            this.alamatMhsDataGrid.Name = "alamatMhsDataGrid";
+            this.alamatMhsDataGrid.ReadOnly = true;
+            this.alamatMhsDataGrid.Width = 145;
             // 
-            // phoneMhsDataGridViewTextBoxColumn
+            // sexDataGrid
             // 
-            this.phoneMhsDataGridViewTextBoxColumn.DataPropertyName = "PhoneMhs";
-            this.phoneMhsDataGridViewTextBoxColumn.HeaderText = "PhoneMhs";
-            this.phoneMhsDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.phoneMhsDataGridViewTextBoxColumn.Name = "phoneMhsDataGridViewTextBoxColumn";
-            this.phoneMhsDataGridViewTextBoxColumn.ReadOnly = true;
-            this.phoneMhsDataGridViewTextBoxColumn.Width = 150;
+            this.sexDataGrid.DataPropertyName = "Sex";
+            this.sexDataGrid.HeaderText = "Sex";
+            this.sexDataGrid.MinimumWidth = 8;
+            this.sexDataGrid.Name = "sexDataGrid";
+            this.sexDataGrid.ReadOnly = true;
+            this.sexDataGrid.Width = 50;
+            // 
+            // phoneMhsDataGrid
+            // 
+            this.phoneMhsDataGrid.DataPropertyName = "PhoneMhs";
+            this.phoneMhsDataGrid.HeaderText = "PhoneMhs";
+            this.phoneMhsDataGrid.MinimumWidth = 8;
+            this.phoneMhsDataGrid.Name = "phoneMhsDataGrid";
+            this.phoneMhsDataGrid.ReadOnly = true;
+            this.phoneMhsDataGrid.Width = 85;
             // 
             // DataGrid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(883, 552);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -198,6 +213,7 @@ namespace ExeDataGridandNavBinding
             ((System.ComponentModel.ISupportInitialize)(this.mataKuliahBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nilaiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.periodeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -216,10 +232,11 @@ namespace ExeDataGridandNavBinding
         private System.Windows.Forms.BindingSource periodeBindingSource;
         private ProdiTIDataSetTableAdapters.PeriodeTableAdapter periodeTableAdapter;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nIMDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn namaMhsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn alamatMhsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Sex;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phoneMhsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nimDataGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn namaMhsDataGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn alamatMhsDataGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sexDataGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneMhsDataGrid;
     }
 }

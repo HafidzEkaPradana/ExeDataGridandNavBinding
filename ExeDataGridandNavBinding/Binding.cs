@@ -21,15 +21,17 @@ namespace ExeDataGridandNavBinding
         SqlDataAdapter dadapter;
         DataSet dset;
         BindingSource bs;
-        string connstring = "database=ProdiIT;server=LAPTOP-8MKEQ456;user=sa;password=mentepermaib20";
+        string connstring = "data source=LAPTOP-8MKEQ456; database=ProdiTI; Integrated Security=True; User ID=sa;Password=mentepermaib20";
         private void Form2_Load(object sender, EventArgs e)
         {
-            dadapter = new SqlDataAdapter("select * from HRD.Mahasiswa", connstring);
+            dadapter = new SqlDataAdapter("select * from Mahasiswa", connstring);
             dset = new DataSet();
             dadapter.Fill(dset);
             bs = new BindingSource();
             bs.DataSource = dset.Tables[0].DefaultView;
             bindingNavigator1.BindingSource = bs;
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -41,6 +43,14 @@ namespace ExeDataGridandNavBinding
 
         private void bindingNavigator1_RefreshItems(object sender, EventArgs e)
         {
+
+        }
+
+        private void Binding_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'prodiTIDataSet.Mahasiswa' table. You can move, or remove it, as needed.
+            this.mahasiswaTableAdapter.Fill(this.prodiTIDataSet.Mahasiswa);
+            this.CenterToScreen();
 
         }
     }
