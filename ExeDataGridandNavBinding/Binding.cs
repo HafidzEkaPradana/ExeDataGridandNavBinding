@@ -29,10 +29,6 @@ namespace ExeDataGridandNavBinding
             dadapter.Fill(dset);
             bs = new BindingSource();
             bs.DataSource = dset.Tables[0].DefaultView;
-            bs.DataSource = dset.Tables[1].DefaultView;
-            bs.DataSource = dset.Tables[2].DefaultView;
-            bs.DataSource = dset.Tables[3].DefaultView;
-            bs.DataSource = dset.Tables[4].DefaultView;
             bindingNavigator1.BindingSource = bs;
 
         }
