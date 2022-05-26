@@ -32,9 +32,14 @@ namespace ExeDataGridandNavBinding
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DataGrid));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.prodiTIDataSet = new ExeDataGridandNavBinding.ProdiTIDataSet();
-            this.prodiTIDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nimDataGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namaMhsDataGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alamatMhsDataGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sexDataGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneMhsDataGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mahasiswaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.prodiTIDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.prodiTIDataSet = new ExeDataGridandNavBinding.ProdiTIDataSet();
             this.mahasiswaTableAdapter = new ExeDataGridandNavBinding.ProdiTIDataSetTableAdapters.MahasiswaTableAdapter();
             this.mataKuliahBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mataKuliahTableAdapter = new ExeDataGridandNavBinding.ProdiTIDataSetTableAdapters.MataKuliahTableAdapter();
@@ -44,15 +49,10 @@ namespace ExeDataGridandNavBinding
             this.periodeTableAdapter = new ExeDataGridandNavBinding.ProdiTIDataSetTableAdapters.PeriodeTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.nimDataGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namaMhsDataGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.alamatMhsDataGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sexDataGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneMhsDataGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prodiTIDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prodiTIDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prodiTIDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prodiTIDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mataKuliahBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nilaiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.periodeBindingSource)).BeginInit();
@@ -72,81 +72,16 @@ namespace ExeDataGridandNavBinding
             this.sexDataGrid,
             this.phoneMhsDataGrid});
             this.dataGridView1.DataSource = this.mahasiswaBindingSource;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView1.Location = new System.Drawing.Point(28, 213);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(817, 253);
+            this.dataGridView1.Size = new System.Drawing.Size(817, 249);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            // 
-            // prodiTIDataSet
-            // 
-            this.prodiTIDataSet.DataSetName = "ProdiTIDataSet";
-            this.prodiTIDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // prodiTIDataSetBindingSource
-            // 
-            this.prodiTIDataSetBindingSource.DataSource = this.prodiTIDataSet;
-            this.prodiTIDataSetBindingSource.Position = 0;
-            // 
-            // mahasiswaBindingSource
-            // 
-            this.mahasiswaBindingSource.DataMember = "Mahasiswa";
-            this.mahasiswaBindingSource.DataSource = this.prodiTIDataSetBindingSource;
-            // 
-            // mahasiswaTableAdapter
-            // 
-            this.mahasiswaTableAdapter.ClearBeforeFill = true;
-            // 
-            // mataKuliahBindingSource
-            // 
-            this.mataKuliahBindingSource.DataMember = "MataKuliah";
-            this.mataKuliahBindingSource.DataSource = this.prodiTIDataSetBindingSource;
-            // 
-            // mataKuliahTableAdapter
-            // 
-            this.mataKuliahTableAdapter.ClearBeforeFill = true;
-            // 
-            // nilaiBindingSource
-            // 
-            this.nilaiBindingSource.DataMember = "Nilai";
-            this.nilaiBindingSource.DataSource = this.prodiTIDataSetBindingSource;
-            // 
-            // nilaiTableAdapter
-            // 
-            this.nilaiTableAdapter.ClearBeforeFill = true;
-            // 
-            // periodeBindingSource
-            // 
-            this.periodeBindingSource.DataMember = "Periode";
-            this.periodeBindingSource.DataSource = this.prodiTIDataSetBindingSource;
-            // 
-            // periodeTableAdapter
-            // 
-            this.periodeTableAdapter.ClearBeforeFill = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(28, 488);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(134, 41);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Back";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(28, 34);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(817, 173);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // nimDataGrid
             // 
@@ -194,11 +129,77 @@ namespace ExeDataGridandNavBinding
             this.phoneMhsDataGrid.ReadOnly = true;
             this.phoneMhsDataGrid.Width = 85;
             // 
+            // mahasiswaBindingSource
+            // 
+            this.mahasiswaBindingSource.DataMember = "Mahasiswa";
+            this.mahasiswaBindingSource.DataSource = this.prodiTIDataSetBindingSource;
+            // 
+            // prodiTIDataSetBindingSource
+            // 
+            this.prodiTIDataSetBindingSource.DataSource = this.prodiTIDataSet;
+            this.prodiTIDataSetBindingSource.Position = 0;
+            // 
+            // prodiTIDataSet
+            // 
+            this.prodiTIDataSet.DataSetName = "ProdiTIDataSet";
+            this.prodiTIDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // mahasiswaTableAdapter
+            // 
+            this.mahasiswaTableAdapter.ClearBeforeFill = true;
+            // 
+            // mataKuliahBindingSource
+            // 
+            this.mataKuliahBindingSource.DataMember = "MataKuliah";
+            this.mataKuliahBindingSource.DataSource = this.prodiTIDataSetBindingSource;
+            // 
+            // mataKuliahTableAdapter
+            // 
+            this.mataKuliahTableAdapter.ClearBeforeFill = true;
+            // 
+            // nilaiBindingSource
+            // 
+            this.nilaiBindingSource.DataMember = "Nilai";
+            this.nilaiBindingSource.DataSource = this.prodiTIDataSetBindingSource;
+            // 
+            // nilaiTableAdapter
+            // 
+            this.nilaiTableAdapter.ClearBeforeFill = true;
+            // 
+            // periodeBindingSource
+            // 
+            this.periodeBindingSource.DataMember = "Periode";
+            this.periodeBindingSource.DataSource = this.prodiTIDataSetBindingSource;
+            // 
+            // periodeTableAdapter
+            // 
+            this.periodeTableAdapter.ClearBeforeFill = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(28, 482);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(134, 41);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Back";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(28, 34);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(817, 173);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // DataGrid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(883, 552);
+            this.ClientSize = new System.Drawing.Size(883, 539);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
@@ -207,9 +208,9 @@ namespace ExeDataGridandNavBinding
             this.Text = "DataGridView";
             this.Load += new System.EventHandler(this.DataGrid_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prodiTIDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prodiTIDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prodiTIDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prodiTIDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mataKuliahBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nilaiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.periodeBindingSource)).EndInit();

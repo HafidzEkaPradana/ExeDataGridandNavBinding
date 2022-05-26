@@ -48,6 +48,10 @@ namespace ExeDataGridandNavBinding
             dataGridView1.Columns["phoneMhsDataGrid"].DefaultCellStyle.SelectionBackColor = Color.SaddleBrown;
             dataGridView1.Columns["phoneMhsDataGrid"].DefaultCellStyle.ForeColor = Color.SandyBrown;
 
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.DarkGray;
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
             dataGridView1.DefaultCellStyle.SelectionForeColor = Color.White;
 
         }
